@@ -4,10 +4,9 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
-
   vite: {
     preview: {
-      allowedHosts: ["prop-insight-nova.onrender.com"],
+      allowedHosts: ["prop-insight-nova.onrender.com", "prop-insight-nova-2.onrender.com"],
     },
   },
 });
