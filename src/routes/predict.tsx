@@ -251,7 +251,7 @@ function Predict() {
               <YAxis stroke="oklch(0.72 0.04 260)" fontSize={11} tickFormatter={(v) => `₹${(v / 1e7).toFixed(1)}Cr`} />
               <Tooltip
                 contentStyle={{ background: "oklch(0.21 0.035 265)", border: "1px solid oklch(1 0 0 / 0.1)", borderRadius: 8 }}
-                formatter={(v: number) => formatINR(v)}
+                formatter={(v) => formatINR(Number(v))}
               />
               <Line type="monotone" dataKey="price" stroke="oklch(0.78 0.18 215)" strokeWidth={3} dot={{ fill: "oklch(0.62 0.22 305)", r: 5 }} />
             </LineChart>
