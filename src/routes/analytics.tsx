@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Fragment } from "react";
 import {
   AreaChart, Area, BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip,
   ScatterChart, Scatter, ZAxis, CartesianGrid, PieChart, Pie, Cell, Legend,
@@ -191,14 +192,14 @@ function CorrelationHeatmap() {
         <div />
         {HEAT_LABELS.map((l) => <div key={l} className="text-center text-muted-foreground py-1">{l}</div>)}
         {HEAT.map((row, i) => (
-          <>
-            <div key={`l${i}`} className="text-muted-foreground py-2 pr-3 text-right">{HEAT_LABELS[i]}</div>
+          <Fragment key={i}>
+            <div className="text-muted-foreground py-2 pr-3 text-right">{HEAT_LABELS[i]}</div>
             {row.map((v, j) => (
-              <div key={`c${i}-${j}`} className="aspect-square rounded grid place-items-center font-mono text-[10px] font-semibold" style={{ background: color(v) }}>
+              <div key={j} className="aspect-square rounded grid place-items-center font-mono text-[10px] font-semibold" style={{ background: color(v) }}>
                 {v.toFixed(2)}
               </div>
             ))}
-          </>
+          </Fragment>
         ))}
       </div>
     </div>
