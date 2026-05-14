@@ -1,6 +1,7 @@
 # 🏠 Smart House Price Prediction System
 
 An AI-powered web application that predicts house prices using Machine Learning algorithms and real-estate analytics. The platform helps users estimate property prices based on features like location, area, number of bedrooms, bathrooms, amenities, and more.
+Live Demo:https://prop-insight-nova-2.onrender.com/
 
 ---
 
